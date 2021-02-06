@@ -12,3 +12,9 @@ function my_theme_enqueue_styles()
         wp_get_theme()->get('Version')
     );
 }
+
+function remove_parent_functionality()
+{
+    remove_action('widgets_init', 'twenty_twenty_one_widgets_init');
+}
+add_action('after_setup_theme', 'remove_parent_functionality');
