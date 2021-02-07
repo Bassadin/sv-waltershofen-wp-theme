@@ -1,0 +1,47 @@
+/*
+ Theme Name:   SV Waltershofen (twentytwentyone child)
+ Theme URI:    https://github.com/VADS/sv-waltershofen-wp-theme
+ Description:  Child theme for Twenty Twenty One
+ Author:       Bastian Hodapp
+ Author URI:   http://bassadin.de
+ Template:     twentytwentyone
+ Version:      0.1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentynineteenchild
+*/
+
+@import "SCSS-Mixins/breakpoints";
+
+// Colors
+$blue-logo-color: #1b84b5;
+$white-logo-color: #fff;
+$black-logo-color: #000;
+
+// Navigation
+.primary-navigation {
+    a {
+        transition: 0.3s all;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $blue-logo-color;
+            color: $white-logo-color;
+        }
+    }
+
+    .sub-menu {
+        border: 1px solid $blue-logo-color;
+    }
+
+    @include breakpoint("m") {
+        div > .menu-wrapper > li > .sub-menu {
+            padding-top: 0;
+
+            li {
+                background-color: white;
+            }
+        }
+    }
+}

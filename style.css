@@ -11,3 +11,35 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentynineteenchild
 */
+/* --------------------------------------------------
+
+   Breakpoint Settings
+   -------------------------------------------------- */
+/* --------------------------------------------------
+
+   Breakpoint Mixin
+   -------------------------------------------------- */
+.primary-navigation a {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.primary-navigation a:hover {
+  text-decoration: none;
+  background-color: #1b84b5;
+  color: #fff;
+}
+
+.primary-navigation .sub-menu {
+  border: 1px solid #1b84b5;
+}
+
+@media (min-width: 1024px) {
+  .primary-navigation div > .menu-wrapper > li > .sub-menu {
+    padding-top: 0;
+  }
+  .primary-navigation div > .menu-wrapper > li > .sub-menu li {
+    background-color: white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
