@@ -19,6 +19,9 @@ $blue-logo-color: #1b84b5;
 $white-logo-color: #fff;
 $black-logo-color: #000;
 
+$color-primary: #8fb339;
+$color-secondary: #755b69;
+
 // Selection color
 ::selection {
     background: $blue-logo-color;
@@ -40,7 +43,7 @@ $black-logo-color: #000;
     justify-content: center;
 
     padding: 40px 0;
-    background-color: lightgreen;
+    background-color: lighten($color: $color-primary, $amount: 20%);
 }
 
 .site-logo {
@@ -62,12 +65,13 @@ $black-logo-color: #000;
 .primary-navigation {
     display: flex;
     top: 10px;
+    background-color: lighten($color: $color-secondary, $amount: 30%);
     @include breakpoint("xs") {
         top: 0;
     }
 
     > .primary-menu-container {
-        background-color: white;
+        // background-color: white;
         padding: 0;
         // padding-top: 70px;
         margin: 0 auto;
@@ -78,7 +82,7 @@ $black-logo-color: #000;
     }
 
     > div > .menu-wrapper {
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
         justify-content: center;
     }
 
@@ -117,6 +121,20 @@ body:not(.primary-navigation-open)
     margin-top: 15px;
     @include breakpoint("xs") {
         margin-top: 0;
+    }
+}
+
+// Content Width
+@include breakpoint("s") {
+    :root {
+        --responsive--aligndefault-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            800px
+        );
+        --responsive--alignwide-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            1240px
+        );
     }
 }
 

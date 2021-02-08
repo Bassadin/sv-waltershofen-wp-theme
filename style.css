@@ -47,7 +47,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 40px 0;
-  background-color: lightgreen;
+  background-color: #bbd57d;
 }
 
 .site-logo {
@@ -70,6 +70,7 @@
   display: -ms-flexbox;
   display: flex;
   top: 10px;
+  background-color: #beabb5;
 }
 
 @media (min-width: 482px) {
@@ -79,7 +80,6 @@
 }
 
 .primary-navigation > .primary-menu-container {
-  background-color: white;
   padding: 0;
   margin: 0 auto;
 }
@@ -91,7 +91,6 @@
 }
 
 .primary-navigation > div > .menu-wrapper {
-  padding-bottom: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -139,6 +138,19 @@ body:not(.primary-navigation-open)
 .site-header.has-logo.has-title-and-tagline
 .primary-navigation {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 667px) {
+  :root {
+    --responsive--aligndefault-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            800px
+        );
+    --responsive--alignwide-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            1240px
+        );
   }
 }
 
