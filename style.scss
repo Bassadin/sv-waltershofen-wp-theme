@@ -28,9 +28,13 @@ $color-secondary: #b58b09;
     color: $white-logo-color;
 }
 
-// Text color
 :root {
+    // Text color
     --primary-nav--color-link: #111;
+
+    /* Font Family */
+    --global--font-primary: "Lora", serif;
+    --global--font-secondary: "Lora", serif;
 }
 
 // Scrollbar
@@ -51,7 +55,6 @@ $color-secondary: #b58b09;
 
 // Header
 .site-title > a {
-    font-weight: bold;
     text-decoration: underline;
 }
 
@@ -90,6 +93,10 @@ $color-secondary: #b58b09;
     text-align: left;
 }
 
+h1.site-title {
+    font-weight: bold;
+}
+
 // Navigation
 .primary-navigation-open .menu-button-container {
     background-color: lighten($color: $color-secondary, $amount: 0%);
@@ -113,6 +120,10 @@ $color-secondary: #b58b09;
 
         @include breakpoint("s") {
             padding-top: 0;
+        }
+
+        > ul > .menu-item > a {
+            font-weight: bold;
         }
     }
 

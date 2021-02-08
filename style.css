@@ -30,6 +30,9 @@
 
 :root {
   --primary-nav--color-link: #111;
+  /* Font Family */
+  --global--font-primary: "Lora", serif;
+  --global--font-secondary: "Lora", serif;
 }
 
 ::-webkit-scrollbar {
@@ -50,7 +53,6 @@
 }
 
 .site-title > a {
-  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -96,6 +98,10 @@
   text-align: left;
 }
 
+h1.site-title {
+  font-weight: bold;
+}
+
 .primary-navigation-open .menu-button-container {
   background-color: #b58b09;
   padding: 0;
@@ -125,6 +131,10 @@
   .primary-navigation > .primary-menu-container {
     padding-top: 0;
   }
+}
+
+.primary-navigation > .primary-menu-container > ul > .menu-item > a {
+  font-weight: bold;
 }
 
 .primary-navigation > div > .menu-wrapper {
