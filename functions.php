@@ -19,3 +19,11 @@ function remove_parent_functionality()
     remove_action('widgets_init', 'twenty_twenty_one_widgets_init');
 }
 add_action('after_setup_theme', 'remove_parent_functionality');
+
+//Meta tags
+function twentytwentyone_add_meta_tags()
+{
+    // theme color
+    echo '<meta name="theme-color" content="#1b84b5" />' . "\n";
+}
+add_action('wp_head', 'twentytwentyone_add_meta_tags');
