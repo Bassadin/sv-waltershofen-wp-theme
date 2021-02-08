@@ -89,8 +89,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 40px 0;
-  background-color: #aadbf2;
+  padding: 100px 0;
+  background: #aadbf2;
+  background-image: url("assets/pics/krebsbachstadion.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(81, 182, 229, 0.4)), to(rgba(148, 210, 239, 0.5))), url("assets/pics/krebsbachstadion.jpg");
+  background-image: linear-gradient(to bottom, rgba(81, 182, 229, 0.4), rgba(148, 210, 239, 0.5)), url("assets/pics/krebsbachstadion.jpg");
+  background-size: cover;
+  background-position: center 60%;
 }
 
 .site-branding:last-child {
@@ -113,7 +118,7 @@ h1.site-title {
   display: -ms-flexbox;
   display: flex;
   top: 10px;
-  background-color: #d6eef9;
+  background-color: #7dc9ec;
 }
 
 @media (min-width: 482px) {
