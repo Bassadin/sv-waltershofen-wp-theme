@@ -19,9 +19,65 @@ $blue-logo-color: #1b84b5;
 $white-logo-color: #fff;
 $black-logo-color: #000;
 
+// Header
+#masthead {
+    margin: 0;
+    max-width: initial;
+    padding-top: 0;
+    display: initial;
+}
+
+.site-super-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 0;
+    background-color: lightgreen;
+}
+
+.site-logo {
+    margin-right: 20px;
+}
+
+.site-branding:last-child {
+    width: initial;
+    text-align: left;
+}
+
 // Navigation
+.primary-navigation-open .menu-button-container {
+    background-color: white;
+    padding: 0;
+    top: -10px;
+}
+
 .primary-navigation {
+    display: flex;
+    top: 10px;
+    @include breakpoint("xs") {
+        top: 0;
+    }
+
+    > .primary-menu-container {
+        background-color: white;
+        padding: 0;
+        // padding-top: 70px;
+        margin: 0 auto;
+
+        @include breakpoint("s") {
+            padding-top: 0;
+        }
+    }
+
+    > div > .menu-wrapper {
+        padding-bottom: 10px;
+        justify-content: center;
+    }
+
     a {
+        padding: 17px;
         transition: 0.3s all;
 
         &:hover {
@@ -35,7 +91,10 @@ $black-logo-color: #000;
         border: 1px solid $blue-logo-color;
     }
 
-    @include breakpoint("m") {
+    @include breakpoint("s") {
+        position: sticky;
+        top: 0 !important;
+        margin: 0 auto;
         div > .menu-wrapper > li > .sub-menu {
             padding-top: 0;
 
@@ -44,4 +103,18 @@ $black-logo-color: #000;
             }
         }
     }
+}
+
+body:not(.primary-navigation-open)
+    .site-header.has-logo.has-title-and-tagline
+    .primary-navigation {
+    margin-top: 15px;
+    @include breakpoint("xs") {
+        margin-top: 0;
+    }
+}
+
+// Footer
+.site-footer {
+    padding-bottom: 0;
 }

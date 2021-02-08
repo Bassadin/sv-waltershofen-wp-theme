@@ -19,7 +19,77 @@
 
    Breakpoint Mixin
    -------------------------------------------------- */
+#masthead {
+  margin: 0;
+  max-width: initial;
+  padding-top: 0;
+  display: initial;
+}
+
+.site-super-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0;
+  background-color: lightgreen;
+}
+
+.site-logo {
+  margin-right: 20px;
+}
+
+.site-branding:last-child {
+  width: initial;
+  text-align: left;
+}
+
+.primary-navigation-open .menu-button-container {
+  background-color: white;
+  padding: 0;
+  top: -10px;
+}
+
+.primary-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 10px;
+}
+
+@media (min-width: 482px) {
+  .primary-navigation {
+    top: 0;
+  }
+}
+
+.primary-navigation > .primary-menu-container {
+  background-color: white;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 667px) {
+  .primary-navigation > .primary-menu-container {
+    padding-top: 0;
+  }
+}
+
+.primary-navigation > div > .menu-wrapper {
+  padding-bottom: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .primary-navigation a {
+  padding: 17px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -34,12 +104,36 @@
   border: 1px solid #1b84b5;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 667px) {
+  .primary-navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0 !important;
+    margin: 0 auto;
+  }
   .primary-navigation div > .menu-wrapper > li > .sub-menu {
     padding-top: 0;
   }
   .primary-navigation div > .menu-wrapper > li > .sub-menu li {
     background-color: white;
   }
+}
+
+body:not(.primary-navigation-open)
+.site-header.has-logo.has-title-and-tagline
+.primary-navigation {
+  margin-top: 15px;
+}
+
+@media (min-width: 482px) {
+  body:not(.primary-navigation-open)
+.site-header.has-logo.has-title-and-tagline
+.primary-navigation {
+    margin-top: 0;
+  }
+}
+
+.site-footer {
+  padding-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
