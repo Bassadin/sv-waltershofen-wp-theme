@@ -13,6 +13,7 @@ function my_theme_enqueue_styles()
     );
 }
 
+// Remove widgets
 function remove_parent_functionality()
 {
     remove_action('widgets_init', 'twenty_twenty_one_widgets_init');
