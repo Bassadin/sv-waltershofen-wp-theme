@@ -19,6 +19,15 @@
 
    Breakpoint Mixin
    -------------------------------------------------- */
+::-moz-selection {
+  background: #1b84b5;
+  color: #fff;
+}
+::selection {
+  background: #1b84b5;
+  color: #fff;
+}
+
 #masthead {
   margin: 0;
   max-width: initial;

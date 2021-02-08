@@ -19,6 +19,12 @@ $blue-logo-color: #1b84b5;
 $white-logo-color: #fff;
 $black-logo-color: #000;
 
+// Selection color
+::selection {
+    background: $blue-logo-color;
+    color: $white-logo-color;
+}
+
 // Header
 #masthead {
     margin: 0;
