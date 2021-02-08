@@ -85,7 +85,7 @@ $color-secondary: #b58b09;
     justify-content: center;
 
     padding: 40px 0;
-    background-color: lighten($color: $color-primary, $amount: 15%);
+    background-color: lighten($color: $blue-logo-color, $amount: 40%);
 }
 
 .site-branding:last-child {
@@ -99,7 +99,7 @@ h1.site-title {
 
 // Navigation
 .primary-navigation-open .menu-button-container {
-    background-color: lighten($color: $color-secondary, $amount: 0%);
+    background-color: lighten($color: $blue-logo-color, $amount: 50%);
     padding: 0;
     top: -10px;
 }
@@ -107,7 +107,7 @@ h1.site-title {
 .primary-navigation {
     display: flex;
     top: 10px;
-    background-color: lighten($color: $color-secondary, $amount: 30%);
+    background-color: lighten($color: $blue-logo-color, $amount: 50%);
     @include breakpoint("xs") {
         top: 0;
     }
@@ -172,6 +172,11 @@ body:not(.primary-navigation-open)
         padding-top: 0;
         box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
     }
+}
+
+// Content
+#content {
+    margin-top: 30px;
 }
 
 // Content Width

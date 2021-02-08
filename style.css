@@ -90,7 +90,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 40px 0;
-  background-color: #d67959;
+  background-color: #aadbf2;
 }
 
 .site-branding:last-child {
@@ -103,7 +103,7 @@ h1.site-title {
 }
 
 .primary-navigation-open .menu-button-container {
-  background-color: #b58b09;
+  background-color: #d6eef9;
   padding: 0;
   top: -10px;
 }
@@ -113,7 +113,7 @@ h1.site-title {
   display: -ms-flexbox;
   display: flex;
   top: 10px;
-  background-color: #f7d260;
+  background-color: #d6eef9;
 }
 
 @media (min-width: 482px) {
@@ -195,6 +195,10 @@ body:not(.primary-navigation-open)
     -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
   }
+}
+
+#content {
+  margin-top: 30px;
 }
 
 @media (min-width: 667px) {
