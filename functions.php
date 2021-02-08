@@ -11,7 +11,7 @@ function my_theme_enqueue_styles()
         array($parent_style),
         wp_get_theme()->get('Version')
     );
-    wp_enqueue_style('google-fonts', "https://fonts.googleapis.com/css2?family=Lora&display=swap");
+    wp_enqueue_style('google-fonts', "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 }
 
 // Remove widgets

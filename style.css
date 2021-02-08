@@ -31,8 +31,8 @@
 :root {
   --primary-nav--color-link: #111;
   /* Font Family */
-  --global--font-primary: "Lora", serif;
-  --global--font-secondary: "Lora", serif;
+  --global--font-primary: "Roboto", sans-serif;
+  --global--font-secondary: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {
