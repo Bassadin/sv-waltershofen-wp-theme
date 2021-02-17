@@ -19,10 +19,24 @@
 
    Breakpoint Mixin
    -------------------------------------------------- */
+@media (min-width: 667px) {
+  :root {
+    --responsive--aligndefault-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            1500px
+        );
+    --responsive--alignwide-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            1240px
+        );
+  }
+}
+
 ::-moz-selection {
   background: #1b84b5;
   color: #fff;
 }
+
 ::selection {
   background: #1b84b5;
   color: #fff;
@@ -216,19 +230,6 @@ body:not(.primary-navigation-open)
 
 #content {
   margin-top: 30px;
-}
-
-@media (min-width: 667px) {
-  :root {
-    --responsive--aligndefault-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            800px
-        );
-    --responsive--alignwide-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            1240px
-        );
-  }
 }
 
 .site-footer {

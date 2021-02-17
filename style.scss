@@ -22,6 +22,20 @@ $black-logo-color: #000;
 $color-primary: #b5502d;
 $color-secondary: #b58b09;
 
+// Content Width
+@include breakpoint("s") {
+    :root {
+        --responsive--aligndefault-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            1500px
+        );
+        --responsive--alignwide-width: min(
+            calc(100vw - 8 * var(--global--spacing-horizontal)),
+            1240px
+        );
+    }
+}
+
 // Selection color
 ::selection {
     background: $blue-logo-color;
@@ -200,20 +214,6 @@ body:not(.primary-navigation-open)
 // Content
 #content {
     margin-top: 30px;
-}
-
-// Content Width
-@include breakpoint("s") {
-    :root {
-        --responsive--aligndefault-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            800px
-        );
-        --responsive--alignwide-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            1240px
-        );
-    }
 }
 
 // Footer
