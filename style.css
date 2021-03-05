@@ -52,14 +52,16 @@
   border-radius: 10px;
 }
 
-.site-title, .site-title > a {
+.site-title,
+.site-title > a {
   color: white;
   text-decoration: none;
   font-weight: bolder;
 }
 
 @media (min-width: 667px) {
-  .site-title, .site-title > a {
+  .site-title,
+  .site-title > a {
     font-size: 3rem;
   }
 }
@@ -245,6 +247,25 @@ article.page figure.post-thumbnail {
 }
 
 .site-footer {
-  padding-bottom: 0;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  padding: 2em;
+  background-color: #072431;
+}
+
+.site-footer > .site-info {
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: white;
+}
+
+.site-footer > .site-info a {
+  color: #d7eef9 !important;
+}
+
+.no-widgets .site-footer {
+  margin-top: 0;
 }
 /*# sourceMappingURL=style.css.map */
