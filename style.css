@@ -69,6 +69,7 @@
 
 .site-branding {
   color: white;
+  text-shadow: 2px 2px 5px #030d12;
 }
 
 .site-branding:last-child {

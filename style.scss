@@ -80,6 +80,7 @@ $color-secondary: #b58b09;
 
 .site-branding {
     color: white;
+    text-shadow: 2px 2px 5px darken($color: $blue-logo-color, $amount: 37%);
 
     &:last-child {
         width: initial;
