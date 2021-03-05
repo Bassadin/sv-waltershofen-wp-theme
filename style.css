@@ -19,26 +19,12 @@
 
    Breakpoint Mixin
    -------------------------------------------------- */
-@media (min-width: 667px) {
-  :root {
-    --responsive--aligndefault-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            1500px
-        );
-    --responsive--alignwide-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            1240px
-        );
-  }
-}
-
 ::-moz-selection {
-  background: #1b84b5;
+  background: #1b85b6;
   color: #fff;
 }
-
 ::selection {
-  background: #1b84b5;
+  background: #1b85b6;
   color: #fff;
 }
 
@@ -60,7 +46,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1b84b5;
+  background: #1b85b6;
   -webkit-box-shadow: inset 0 0 5px black;
           box-shadow: inset 0 0 5px black;
   border-radius: 10px;
@@ -82,8 +68,8 @@
 }
 
 .site-super-header .site-logo .custom-logo {
-  -webkit-filter: drop-shadow(5px 5px 7px #04131a);
-          filter: drop-shadow(5px 5px 7px #04131a);
+  -webkit-filter: drop-shadow(5px 5px 7px #04131b);
+          filter: drop-shadow(5px 5px 7px #04131b);
   height: 100%;
   max-height: initial;
   -o-object-fit: contain;
@@ -116,10 +102,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 35px 0;
-  background: #aadbf2;
+  background: #abdcf2;
   background-image: url("assets/pics/krebsbachstadion.jpg");
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(81, 182, 229, 0.4)), to(rgba(148, 210, 239, 0.5))), url("assets/pics/krebsbachstadion.jpg");
-  background-image: linear-gradient(to bottom, rgba(81, 182, 229, 0.4), rgba(148, 210, 239, 0.5)), url("assets/pics/krebsbachstadion.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(82, 183, 229, 0.4)), to(rgba(149, 210, 239, 0.5))), url("assets/pics/krebsbachstadion.jpg");
+  background-image: linear-gradient(to bottom, rgba(82, 183, 229, 0.4), rgba(149, 210, 239, 0.5)), url("assets/pics/krebsbachstadion.jpg");
   background-size: cover;
   background-position: center 60%;
 }
@@ -133,18 +119,12 @@ h1.site-title {
   font-weight: bold;
 }
 
-.primary-navigation-open .menu-button-container {
-  background-color: #d6eef9;
-  padding: 0;
-  top: -10px;
-}
-
 .primary-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 10px;
-  background-color: #7dc9ec;
+  background-color: #abdcf2;
 }
 
 @media (min-width: 482px) {
@@ -154,13 +134,15 @@ h1.site-title {
 }
 
 .primary-navigation > .primary-menu-container {
-  padding: 0;
-  margin: 0 auto;
+  background-color: #abdcf2;
+  padding: 0.2em;
+  margin-top: 3.2em;
 }
 
-@media (min-width: 667px) {
+@media (min-width: 482px) {
   .primary-navigation > .primary-menu-container {
-    padding-top: 0;
+    padding: 0;
+    margin: 0 auto;
   }
 }
 
@@ -189,12 +171,12 @@ h1.site-title {
 
 .primary-navigation a:hover {
   text-decoration: none;
-  background-color: #1b84b5;
+  background-color: #1b85b6;
   color: #fff;
 }
 
 .primary-navigation .sub-menu {
-  border: 1px solid #1b84b5;
+  border: 1px solid #0e445d;
 }
 
 @media (min-width: 667px) {
@@ -216,6 +198,9 @@ body:not(.primary-navigation-open)
 .site-header.has-logo.has-title-and-tagline
 .primary-navigation {
   padding-top: 15px;
+  -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
+  z-index: 500;
 }
 
 @media (min-width: 482px) {
@@ -223,9 +208,19 @@ body:not(.primary-navigation-open)
 .site-header.has-logo.has-title-and-tagline
 .primary-navigation {
     padding-top: 0;
-    -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
   }
+}
+
+.primary-navigation-open .menu-button-container {
+  background-color: #52b7e5;
+  -webkit-box-shadow: 0px -8px 15px 10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px -8px 15px 10px rgba(0, 0, 0, 0.75);
+  padding: 0.5em 0;
+  top: -10px;
+}
+
+.primary-navigation-open .primary-menu-container {
+  background-color: #e4f4fb;
 }
 
 #content {

@@ -15,7 +15,7 @@
 @import "SCSS-Mixins/breakpoints";
 
 // Colors
-$blue-logo-color: #1b84b5;
+$blue-logo-color: hsl(199, 74%, 41%); //#1b84b5
 $white-logo-color: #fff;
 $black-logo-color: #000;
 
@@ -23,18 +23,16 @@ $color-primary: #b5502d;
 $color-secondary: #b58b09;
 
 // Content Width
-@include breakpoint("s") {
-    :root {
-        --responsive--aligndefault-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            1500px
-        );
-        --responsive--alignwide-width: min(
-            calc(100vw - 8 * var(--global--spacing-horizontal)),
-            1240px
-        );
-    }
-}
+// :root {
+//     --responsive--aligndefault-width: min(
+//         calc(100vw - 8 * var(--global--spacing-horizontal)),
+//         1200px
+//     );
+//     --responsive--alignwide-width: min(
+//         calc(100vw - 8 * var(--global--spacing-horizontal)),
+//         1000px
+//     );
+// }
 
 // Selection color
 ::selection {
@@ -135,28 +133,23 @@ h1.site-title {
 }
 
 // Navigation
-.primary-navigation-open .menu-button-container {
-    background-color: lighten($color: $blue-logo-color, $amount: 50%);
-    padding: 0;
-    top: -10px;
-}
-
 .primary-navigation {
     display: flex;
     top: 10px;
-    background-color: lighten($color: $blue-logo-color, $amount: 30%);
+    background-color: lighten($color: $blue-logo-color, $amount: 40%);
     @include breakpoint("xs") {
         top: 0;
     }
 
     > .primary-menu-container {
-        // background-color: white;
-        padding: 0;
+        background-color: lighten($color: $blue-logo-color, $amount: 40%);
+        padding: 0.2em;
+        margin-top: 3.2em;
         // padding-top: 70px;
-        margin: 0 auto;
 
-        @include breakpoint("s") {
-            padding-top: 0;
+        @include breakpoint("xs") {
+            padding: 0;
+            margin: 0 auto;
         }
 
         > ul > .menu-item > a {
@@ -184,7 +177,7 @@ h1.site-title {
     }
 
     .sub-menu {
-        border: 1px solid $blue-logo-color;
+        border: 1px solid darken($color: $blue-logo-color, $amount: 20%);
     }
 
     @include breakpoint("s") {
@@ -205,9 +198,23 @@ body:not(.primary-navigation-open)
     .site-header.has-logo.has-title-and-tagline
     .primary-navigation {
     padding-top: 15px;
+    box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
     @include breakpoint("xs") {
         padding-top: 0;
-        box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
+    }
+    z-index: 500;
+}
+
+.primary-navigation-open {
+    .menu-button-container {
+        background-color: lighten($color: $blue-logo-color, $amount: 20%);
+        box-shadow: 0px -8px 15px 10px rgba(0, 0, 0, 0.75);
+        padding: 0.5em 0;
+        top: -10px;
+    }
+
+    .primary-menu-container {
+        background-color: lighten($color: $blue-logo-color, $amount: 53%);
     }
 }
 
