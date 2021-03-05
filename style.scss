@@ -66,15 +66,14 @@ $color-secondary: #b58b09;
 }
 
 // Header
-.site-title {
+.site-title, .site-title > a {
     color: white;
-    > a {
-        text-decoration: none;
-        font-weight: bolder;
 
-        @include breakpoint("s") {
-            font-size: 2em;
-        }
+    text-decoration: none;
+    font-weight: bolder;
+
+    @include breakpoint("s") {
+        font-size: 3rem;
     }
 }
 

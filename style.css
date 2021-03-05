@@ -52,18 +52,15 @@
   border-radius: 10px;
 }
 
-.site-title {
+.site-title, .site-title > a {
   color: white;
-}
-
-.site-title > a {
   text-decoration: none;
   font-weight: bolder;
 }
 
 @media (min-width: 667px) {
-  .site-title > a {
-    font-size: 2em;
+  .site-title, .site-title > a {
+    font-size: 3rem;
   }
 }
 
