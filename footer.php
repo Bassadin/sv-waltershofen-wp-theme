@@ -30,7 +30,7 @@
 						'theme_location' => 'footer',
 						'items_wrap'     => '%3$s',
 						'container'      => false,
-						'depth'          => 1,
+						'depth'          => 0,
 						'link_before'    => '<span>',
 						'link_after'     => '</span>',
 						'fallback_cb'    => false,
@@ -39,6 +39,7 @@
 				?>
 			</ul><!-- .footer-navigation-wrapper -->
 		</nav><!-- .footer-navigation -->
+		<hr>
 	<?php endif; ?>
 	<div class="site-info">
 		<div class="site-name">

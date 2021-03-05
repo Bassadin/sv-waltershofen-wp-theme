@@ -250,15 +250,101 @@ article.page figure.post-thumbnail {
   margin: 0;
   width: 100%;
   max-width: none;
-  padding: 2em;
+  padding: 1em;
   background-color: #072431;
+  color: white;
+}
+
+@media (min-width: 482px) {
+  .site-footer {
+    padding: 2.5em;
+  }
+}
+
+.site-footer hr {
+  width: 100%;
+  border-bottom: #abdcf2 solid 1px;
+}
+
+.footer-navigation {
+  margin-top: 0;
+}
+
+.footer-navigation a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.footer-navigation .footer-navigation-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (17em)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 17em);
+  grid-gap: 2em 1.5em;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+@media (min-width: 667px) {
+  .footer-navigation .footer-navigation-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footer-navigation .footer-navigation-wrapper > li {
+  max-width: 25em;
+}
+
+.footer-navigation .footer-navigation-wrapper > li > a {
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  padding: 0.3em 0;
+  line-height: 1.3em;
+}
+
+@media (min-width: 1024px) {
+  .footer-navigation .footer-navigation-wrapper > li > a {
+    font-size: 1.5em;
+  }
+}
+
+.footer-navigation .footer-navigation-wrapper > li .sub-menu {
+  font-size: 0.95em;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+
+@media (min-width: 1024px) {
+  .footer-navigation .footer-navigation-wrapper > li .sub-menu {
+    font-size: 1.1em;
+  }
+}
+
+.footer-navigation .footer-navigation-wrapper > li .sub-menu .sub-menu {
+  padding-left: 1em;
+}
+
+.footer-navigation .footer-navigation-wrapper > li .sub-menu li {
+  display: list-item;
+  margin: 0.2em 0;
+  line-height: initial;
+}
+
+.footer-navigation .footer-navigation-wrapper > li .sub-menu li a {
+  padding: 0.4em 0;
+  margin: 2em 0;
 }
 
 .site-footer > .site-info {
   padding: 0;
   margin: 0;
   border: none;
-  color: white;
+  color: inherit;
 }
 
 .site-footer > .site-info a {
