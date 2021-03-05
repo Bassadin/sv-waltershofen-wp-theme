@@ -178,8 +178,8 @@ h1.site-title {
 
 .primary-navigation a {
   padding: 17px;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
 }
 
 .primary-navigation a:hover {
