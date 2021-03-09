@@ -14,13 +14,6 @@ function my_theme_enqueue_styles()
     wp_enqueue_style('google-fonts', "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 }
 
-// Remove widgets
-function remove_parent_functionality()
-{
-    remove_action('widgets_init', 'twenty_twenty_one_widgets_init');
-}
-add_action('after_setup_theme', 'remove_parent_functionality');
-
 //Meta tags
 function twentytwentyone_add_meta_tags()
 {

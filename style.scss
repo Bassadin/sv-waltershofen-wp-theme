@@ -258,10 +258,30 @@ article.page figure.post-thumbnail {
         width: 100%;
         border-bottom: lighten($color: $blue-logo-color, $amount: 40%) solid 1px;
     }
+
+    .widget-area {
+        margin: 0;
+        padding-top: 0;
+        color: white;
+        max-width: unset;
+    }
+}
+
+.widget-area,
+.footer-navigation-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 17rem);
+    grid-gap: 2rem 1.5rem;
+    justify-content: left;
+
+    @include breakpoint("s") {
+        justify-content: center;
+    }
 }
 
 .footer-navigation {
     margin-top: 0;
+    margin-bottom: 2.5em;
 
     a {
         color: white !important;
@@ -269,15 +289,6 @@ article.page figure.post-thumbnail {
     }
 
     .footer-navigation-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 17em);
-        grid-gap: 2em 1.5em;
-        justify-content: left;
-
-        @include breakpoint("s") {
-            justify-content: center;
-        }
-
         > li {
             max-width: 25em;
 
