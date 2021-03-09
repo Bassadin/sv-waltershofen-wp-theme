@@ -55,6 +55,25 @@
 				<?php endif; ?>
 			<?php endif; ?>
 		</div><!-- .site-name -->
+		<?php if (has_nav_menu('footer-legal-menu')) : ?>
+			<nav aria-label="<?php esc_attr_e('Footer Legal Navigation', 'twentytwentyone'); ?>" class="footer-legal-navigation">
+				<ul class="footer-legal-menu-items-wrapper">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'footer-legal-menu',
+							'items_wrap'     => '%3$s',
+							'container'      => false,
+							'depth'          => 0,
+							'link_before'    => '<span>',
+							'link_after'     => '</span>',
+							'fallback_cb'    => false,
+						)
+					);
+					?>
+				</ul><!-- .footer-navigation-wrapper -->
+			</nav><!-- .footer-navigation -->
+		<?php endif; ?>
 		<div class="powered-by">
 			<?php
 			printf(

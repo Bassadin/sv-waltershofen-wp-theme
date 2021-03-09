@@ -333,3 +333,27 @@ article.page figure.post-thumbnail {
 .no-widgets .site-footer {
     margin-top: 0;
 }
+
+//Legal footer nav
+.footer-legal-navigation {
+    margin: 2em 0;
+    @include breakpoint("m") {
+        margin-left: 2em;
+    }
+
+    .footer-legal-menu-items-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        list-style: none;
+
+        @include breakpoint("m") {
+            flex-direction: row;
+            margin: 0 auto;
+
+            li {
+                margin: 1em;
+            }
+        }
+    }
+}

@@ -28,3 +28,10 @@ function twentytwentyone_add_meta_tags()
     echo '<meta name="theme-color" content="#1b84b5" />' . "\n";
 }
 add_action('wp_head', 'twentytwentyone_add_meta_tags');
+
+//New Menu
+function register_my_menu()
+{
+    register_nav_menu('footer-legal-menu', __('Footer Legal Menu'));
+}
+add_action('init', 'register_my_menu');
