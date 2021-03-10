@@ -19,10 +19,41 @@
 
    Breakpoint Mixin
    -------------------------------------------------- */
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li {
+  border-style: solid;
+  border-color: #1b85b6 #000 #000 #1b85b6;
+  padding: 0;
+  -webkit-box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li .wp-block-latest-posts__featured-image {
+  margin-bottom: 0;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li .wp-block-latest-posts__featured-image a {
+  width: 100%;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li .wp-block-latest-posts__featured-image a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: unset !important;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li > *:not(:first-child) {
+  padding: 0 1rem;
+}
+
+.wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li > *:last-child {
+  margin-bottom: .7em;
+}
+
 ::-moz-selection {
   background: #1b85b6;
   color: #fff;
 }
+
 ::selection {
   background: #1b85b6;
   color: #fff;
