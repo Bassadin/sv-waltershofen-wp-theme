@@ -14,13 +14,9 @@
 
 @import "SCSS-Mixins/breakpoints";
 
-// Colors
+// Imports
 $blue-logo-color: hsl(199, 74%, 41%); //#1b84b5
-$white-logo-color: #fff;
-$black-logo-color: #000;
-
-$color-primary: #b5502d;
-$color-secondary: #b58b09;
+@import "variables";
 
 // Content Width
 // :root {
