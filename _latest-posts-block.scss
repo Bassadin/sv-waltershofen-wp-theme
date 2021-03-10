@@ -14,12 +14,14 @@
 
         .wp-block-latest-posts__featured-image {
             margin-bottom: 0;
-            height: 10em;
+            height: 9em;
             a {
                 width: 100%;
+                height: 100%;
 
                 img {
                     object-fit: cover;
+                    height: 100% !important;
                     max-width: unset !important;
                 }
             }
@@ -30,7 +32,8 @@
 
         > a {
             background-color: $blue-logo-color;
-            padding: .5em;
+            padding: 0.5em;
+            margin-top: 0;
             width: 100%;
             color: white;
         }
@@ -39,4 +42,10 @@
             margin-bottom: 0.7em;
         }
     }
+}
+
+// Make default featured image look okay
+img.attachment-medium.default-featured-img {
+    width: auto !important;
+    margin: 0 auto;
 }
