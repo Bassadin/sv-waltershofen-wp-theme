@@ -3,15 +3,18 @@
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders {
     li {
         border-style: solid;
+        border-width: 0.2em;
         border-color: $blue-logo-color $black-logo-color $black-logo-color
             $blue-logo-color;
 
         padding: 0;
 
-        box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 3px 3px 10px
+            rgba(darken($color: $blue-logo-color, $amount: 37%), 0.6);
 
         .wp-block-latest-posts__featured-image {
             margin-bottom: 0;
+            height: 10em;
             a {
                 width: 100%;
 
@@ -21,12 +24,19 @@
                 }
             }
         }
-        > *:not(:first-child) {
+        > *:not(.wp-block-latest-posts__featured-image):not(:first-child):not(a) {
             padding: 0 1rem;
         }
 
+        > a {
+            background-color: $blue-logo-color;
+            padding: .5em;
+            width: 100%;
+            color: white;
+        }
+
         > *:last-child {
-            margin-bottom: .7em;
+            margin-bottom: 0.7em;
         }
     }
 }
