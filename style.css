@@ -208,8 +208,10 @@ h1.site-title {
 
 .primary-navigation > .primary-menu-container {
   background-color: #abdcf2;
-  padding: 0.2em;
+  padding: 0;
+  border: none;
   margin-top: 3.2em;
+  height: calc(100% - 64px);
 }
 
 @media (min-width: 482px) {
@@ -221,10 +223,12 @@ h1.site-title {
 
 .primary-navigation > .primary-menu-container > ul > .menu-item > a {
   font-weight: bold;
+  padding: 1em 0.6em;
+  margin: 0.2em 0;
 }
 
 .primary-navigation > div > .menu-wrapper {
-  padding-bottom: 10px;
+  padding: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -250,6 +254,7 @@ h1.site-title {
 
 .primary-navigation .sub-menu {
   border: 1px solid #0e445d;
+  margin-right: 0.5em;
 }
 
 @media (min-width: 667px) {
@@ -264,6 +269,19 @@ h1.site-title {
   }
   .primary-navigation div > .menu-wrapper > li > .sub-menu li {
     background-color: white;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .menu-button-container {
+    width: 100%;
+  }
+  .menu-button-container #primary-mobile-menu {
+    width: 100%;
+    margin: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 

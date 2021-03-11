@@ -152,9 +152,10 @@ h1.site-title {
 
     > .primary-menu-container {
         background-color: lighten($color: $blue-logo-color, $amount: 40%);
-        padding: 0.2em;
+        padding: 0;
+        border: none;
         margin-top: 3.2em;
-        // padding-top: 70px;
+        height: calc(100% - 64px);
 
         @include breakpoint("xs") {
             padding: 0;
@@ -163,11 +164,13 @@ h1.site-title {
 
         > ul > .menu-item > a {
             font-weight: bold;
+            padding: 1em 0.6em;
+            margin: 0.2em 0;
         }
     }
 
     > div > .menu-wrapper {
-        padding-bottom: 10px;
+        padding: 0;
         @include breakpoint("xs") {
             padding-bottom: 0;
         }
@@ -187,6 +190,7 @@ h1.site-title {
 
     .sub-menu {
         border: 1px solid darken($color: $blue-logo-color, $amount: 20%);
+        margin-right: 0.5em;
     }
 
     @include breakpoint("s") {
@@ -199,6 +203,18 @@ h1.site-title {
             li {
                 background-color: white;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .menu-button-container {
+        width: 100%;
+
+        #primary-mobile-menu {
+            width: 100%;
+            margin: 0;
+            justify-content: flex-end;
         }
     }
 }
