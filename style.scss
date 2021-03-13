@@ -149,6 +149,18 @@ h1.site-title {
     @include breakpoint("xs") {
         top: 0;
     }
+    @include breakpoint("s") {
+        position: sticky;
+        top: 0 !important;
+        margin: 0 auto;
+        div > .menu-wrapper > li > .sub-menu {
+            padding-top: 0;
+
+            li {
+                background-color: white;
+            }
+        }
+    }
 
     > .primary-menu-container {
         background-color: lighten($color: $blue-logo-color, $amount: 40%);
@@ -157,15 +169,30 @@ h1.site-title {
         margin-top: 3.2em;
         height: calc(100% - 64px);
 
+        > ul > .menu-item > a {
+            font-weight: bold;
+
+            @media screen and (max-width: 481px) {
+                padding: 1em 0.6em;
+                margin: 0.2em 0;
+            }
+        }
+
         @include breakpoint("xs") {
             padding: 0;
             margin: 0 auto;
         }
+    }
 
-        > ul > .menu-item > a {
-            font-weight: bold;
-            padding: 1em 0.6em;
-            margin: 0.2em 0;
+    > .menu-button-container {
+        @media screen and (max-width: 481px) {
+            width: 100%;
+
+            #primary-mobile-menu {
+                width: 100%;
+                margin: 0;
+                justify-content: flex-end;
+            }
         }
     }
 
@@ -191,31 +218,6 @@ h1.site-title {
     .sub-menu {
         border: 1px solid darken($color: $blue-logo-color, $amount: 20%);
         margin-right: 0.5em;
-    }
-
-    @include breakpoint("s") {
-        position: sticky;
-        top: 0 !important;
-        margin: 0 auto;
-        div > .menu-wrapper > li > .sub-menu {
-            padding-top: 0;
-
-            li {
-                background-color: white;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 481px) {
-    .menu-button-container {
-        width: 100%;
-
-        #primary-mobile-menu {
-            width: 100%;
-            margin: 0;
-            justify-content: flex-end;
-        }
     }
 }
 
