@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  Theme Name:   SV Waltershofen (twentytwentyone child)
  Theme URI:    https://github.com/VADS/sv-waltershofen-wp-theme
@@ -45,6 +46,8 @@
   right: 0.5em;
   background-color: white;
   border-radius: 0.5em;
+  -webkit-box-shadow: 3px ​3px 8px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 3px ​3px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .wp-block-latest-posts.is-style-twentytwentyone-latest-posts-borders li .wp-block-latest-posts__featured-image {
