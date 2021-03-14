@@ -14,14 +14,6 @@ function my_theme_enqueue_styles()
     wp_enqueue_style('google-fonts', "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 }
 
-//Meta tags
-function twentytwentyone_add_meta_tags()
-{
-    // theme color
-    echo '<meta name="theme-color" content="#1b84b5" />' . "\n";
-}
-add_action('wp_head', 'twentytwentyone_add_meta_tags');
-
 //New Menu
 function register_my_menu()
 {
