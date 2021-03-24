@@ -1,0 +1,129 @@
+@import "variables";
+
+// Footer
+.site-footer {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    padding: 1em;
+    background-color: darken($color: $blue-logo-color, $amount: 30%);
+    color: white;
+
+    @include breakpoint("xs") {
+        padding: 2.5em;
+    }
+
+    hr {
+        width: 100%;
+        border-bottom: lighten($color: $blue-logo-color, $amount: 40%) solid 1px;
+    }
+
+    .widget-area {
+        margin: 0;
+        padding-top: 0;
+        color: white;
+        max-width: unset;
+    }
+}
+
+.widget-area,
+.footer-navigation-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 17rem);
+    grid-gap: 2rem 1.5rem;
+    justify-content: left;
+
+    @include breakpoint("s") {
+        justify-content: center;
+    }
+}
+
+.footer-navigation {
+    margin-top: 0;
+    margin-bottom: 2.5em;
+
+    a {
+        color: white !important;
+        text-decoration: none;
+    }
+
+    .footer-navigation-wrapper {
+        > li {
+            max-width: 25em;
+
+            > a {
+                font-weight: bold;
+                width: 100%;
+                display: block;
+                padding: 0.3em 0;
+                line-height: 1.3em;
+                @include breakpoint("m") {
+                    font-size: 1.5em;
+                }
+            }
+
+            .sub-menu {
+                font-size: 0.95em;
+                @include breakpoint("m") {
+                    font-size: 1.1em;
+                }
+                list-style: none;
+                padding-left: 0;
+                margin-top: 0.5em;
+
+                .sub-menu {
+                    padding-left: 1em;
+                }
+
+                li {
+                    display: list-item;
+                    margin: 0.2em 0;
+                    line-height: initial;
+                    a {
+                        padding: 0.4em 0;
+                        margin: 2em 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.site-footer > .site-info {
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: inherit;
+
+    a {
+        color: lighten($color: $blue-logo-color, $amount: 50%) !important;
+    }
+}
+
+.no-widgets .site-footer {
+    margin-top: 0;
+}
+
+//Legal footer nav
+.footer-legal-navigation {
+    margin: 2em 0;
+    @include breakpoint("m") {
+        margin-left: 2em;
+    }
+
+    .footer-legal-menu-items-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        list-style: none;
+
+        @include breakpoint("m") {
+            flex-direction: row;
+            margin: 0 auto;
+
+            li {
+                margin: 1em;
+            }
+        }
+    }
+}
