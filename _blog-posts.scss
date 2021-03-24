@@ -38,15 +38,19 @@
 
         img.attachment-post-thumbnail {
             margin: 0;
+            object-fit: cover;
+            height: 10em !important;
+            max-width: unset !important;
         }
 
         h2.entry-title {
+            font-size: 1.5em;
             margin-bottom: 0 !important;
             background-color: $blue-logo-color;
             color: white;
-            padding: 0.8rem;
+            padding: 0.7rem 0.2em;
             @include breakpoint("s") {
-                padding: 1.3rem;
+                padding: 1.2rem 0.4em;
             }
         }
 
