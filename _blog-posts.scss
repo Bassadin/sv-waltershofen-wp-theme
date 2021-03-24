@@ -1,0 +1,38 @@
+@import "variables";
+
+.blog main {
+    max-width: var(--responsive--alignwide-width);
+    margin: 0 auto;
+
+    display: grid;
+    grid-gap: 1em 1em;
+
+    grid-template-columns: minmax(1rem, 1fr); //Hack for small screen sizes
+    @include breakpoint("s") {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    //Everything except nav
+    > article {
+        margin: 0;
+        padding: 0.5em;
+        @include breakpoint("s") {
+            padding: 1.5em;
+        }
+        border-style: solid;
+        border-width: 0.2em;
+        border-color: $blue-logo-color $black-logo-color $black-logo-color
+            $blue-logo-color;
+        box-shadow: 3px 3px 10px
+            rgba(darken($color: $blue-logo-color, $amount: 37%), 0.6);
+
+        > footer {
+            padding: 0 !important;
+            border: none !important;
+        }
+    }
+
+    nav.pagination {
+        grid-column: 1/-1;
+    }
+}
