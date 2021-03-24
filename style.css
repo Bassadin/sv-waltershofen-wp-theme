@@ -97,7 +97,7 @@ img.attachment-medium.default-featured-img {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  grid-gap: 1em 1em;
+  grid-gap: 1rem 1rem;
   -ms-grid-columns: minmax(1rem, 1fr);
       grid-template-columns: minmax(1rem, 1fr);
 }
@@ -111,7 +111,6 @@ img.attachment-medium.default-featured-img {
 
 .blog main > article {
   margin: 0;
-  padding: 0.5em;
   border-style: solid;
   border-width: 0.2em;
   border-color: #1b85b6 #000 #000 #1b85b6;
@@ -119,15 +118,35 @@ img.attachment-medium.default-featured-img {
           box-shadow: 3px 3px 10px rgba(3, 13, 18, 0.6);
 }
 
-@media (min-width: 667px) {
-  .blog main > article {
-    padding: 1.5em;
-  }
+.blog main > article > .entry-content {
+  margin: 1rem !important;
 }
 
 .blog main > article > footer {
   padding: 0 !important;
+  margin: 1rem !important;
   border: none !important;
+}
+
+.blog main > article figure.post-thumbnail {
+  margin: 0;
+}
+
+.blog main > article img.attachment-post-thumbnail {
+  margin: 0;
+}
+
+.blog main > article h2.entry-title {
+  margin-bottom: 0 !important;
+  background-color: #1b85b6;
+  color: white;
+  padding: 0.8rem;
+}
+
+@media (min-width: 667px) {
+  .blog main > article h2.entry-title {
+    padding: 1.3rem;
+  }
 }
 
 .blog main nav.pagination {

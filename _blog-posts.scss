@@ -5,7 +5,7 @@
     margin: 0 auto;
 
     display: grid;
-    grid-gap: 1em 1em;
+    grid-gap: 1rem 1rem;
 
     grid-template-columns: minmax(1rem, 1fr); //Hack for small screen sizes
     @include breakpoint("s") {
@@ -15,10 +15,6 @@
     //Everything except nav
     > article {
         margin: 0;
-        padding: 0.5em;
-        @include breakpoint("s") {
-            padding: 1.5em;
-        }
         border-style: solid;
         border-width: 0.2em;
         border-color: $blue-logo-color $black-logo-color $black-logo-color
@@ -26,10 +22,36 @@
         box-shadow: 3px 3px 10px
             rgba(darken($color: $blue-logo-color, $amount: 37%), 0.6);
 
+        > .entry-content {
+            margin: 1rem !important;
+        }
+
         > footer {
             padding: 0 !important;
+            margin: 1rem !important;
             border: none !important;
         }
+
+        figure.post-thumbnail {
+            margin: 0;
+        }
+
+        img.attachment-post-thumbnail {
+            margin: 0;
+        }
+
+        h2.entry-title {
+            margin-bottom: 0 !important;
+            background-color: $blue-logo-color;
+            color: white;
+            padding: 0.8rem;
+            @include breakpoint("s") {
+                padding: 1.3rem;
+            }
+        }
+
+        // > * {
+        // }
     }
 
     nav.pagination {
